@@ -1,5 +1,7 @@
 (function(){
   angular.module('SMNetwork')
+
+  //Login controller
   .controller('NavigationController', ['$scope', '$http', '$state',
     function($scope, $http, $state){
       $scope.logUserIn = function (){
@@ -10,4 +12,5 @@
         });
       }
     }]);
+
 }());

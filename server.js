@@ -5,8 +5,10 @@ var bodyParser = require('body-parser');
 var app = express();
 var authenticationController = require('./server/controllers/authentication-controller');
 
+//Connect to DB
 mongoose.connect('mongodb://localhost:27017/smnetwork');
 
+//Usage
 app.use(bodyParser.json());
 app.use('/app', express.static(__dirname + "/app"));
 app.use('/node_modules', express.static(__dirname + "/node_modules"));

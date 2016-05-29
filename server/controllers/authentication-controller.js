@@ -1,5 +1,6 @@
 var User = require('../datasets/users');
 
+//Signup Module
 module.exports.signup = function (req, res){
   var user = new User(req.body);
   user.save();
@@ -7,6 +8,7 @@ module.exports.signup = function (req, res){
   res.json(req.body);
 }
 
+//Login Module
 module.exports.login = function (req, res){
   User.find(req.body, function (err, results){
     if (err){
